@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogapp2</title>
+    <title>Blogapp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<a class="brand" href="#home">Blog App</a>
+<!-- <a class="brand" href="#home">Blog App</a> -->
 
   <body>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/msg' %>
-
     <%= yield %>
 
+    <%= render 'layouts/footer' %>
 
   </body>
 </html>
