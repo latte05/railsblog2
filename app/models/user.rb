@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many  :articles
-  # all e-mails are saved in lowercase by downcase method
+
+
   before_save { self.email = email.downcase }
 
   validates :username, presence: true,
@@ -13,4 +14,7 @@ class User < ActiveRecord::Base
              uniqueness: { case_sensitive: false },
              length: { maximum: 105},
              format: {with: VALID_EMAIL_REGEX }
+  has_secure_password
+  # all e-mails are saved in lowercase by downcase method
+
 end
