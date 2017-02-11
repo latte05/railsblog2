@@ -14,6 +14,13 @@ gem 'rails', '~> 5.0.1'
 #secure password
 gem 'bcrypt', '~> 3.1.7'
 
+#pageneations
+#gem 'will_paginate'
+gem 'will_paginate', '>= 3.1'
+gem 'will_paginate-bootstrap'
+#gem 'bootstrap-will_paginate'
+
+
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6' #added on 2/1/2017
