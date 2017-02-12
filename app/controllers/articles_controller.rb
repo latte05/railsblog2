@@ -62,8 +62,8 @@ private
     end
 
     def require_same_user
-      if current_user != @article.user
-          flsuh[:danger] = "You can ony edit or delete your own article"
+      if current_user != @article.user and !current_user.admin?
+          flash[:danger] = "You can ony edit or delete your own article"
           redirect_to root_path
       end
     end
